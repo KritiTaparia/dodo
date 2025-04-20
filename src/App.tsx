@@ -1,19 +1,14 @@
-import { useState } from 'react'
-import './App.css'
+import Board from "@/components/board";
+import "./App.css";
+import { useStore } from "./lib/store";
 
 function App() {
-	const [count, setCount] = useState(0)
-
-	return (
-		<>
-			<h1>Vite + React</h1>
-			<div className="card">
-				<button onClick={() => setCount((count) => count + 1)}>
-					count is {count}
-				</button>
-			</div>
-		</>
-	)
+  const selectedBoard = useStore((store) => store.selectedBoard);
+  return (
+	// Header
+	<Board title={selectedBoard} />
+	// Footer
+  );
 }
 
-export default App
+export default App;
