@@ -2,7 +2,7 @@ import { create } from 'zustand';
 import { DEFAULT_STATE } from './constants';
 import { IStore } from './types';
 
-export const useStore = create<IStore>((set, get) => ({
+export const useStore = create<IStore>((_set, get) => ({
     boards: DEFAULT_STATE,
     selectedBoard: DEFAULT_STATE[0].title,
 
