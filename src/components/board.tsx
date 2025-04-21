@@ -9,13 +9,13 @@ export default function Board({ title }: IBoardParams) {
   const board = getSelectedBoard(title);
 
   return (
-    <div className="mb-2 border-2 border-gray-200 rounded-xl p-4">
-      <h1 className="bg-amber-600 rounded-md py-1 text-amber-50">{board.title}</h1>
-      <ul>
+    <div className="py-4 px-8 w-fit min-w-full">
+      <h1 className="mb-6">{board.title}</h1>
+      <div className="flex justify-start align-top gap-4">
         {board.lists.map((list) => (
-          <List list={list} />
+          <List key={list.title} list={list} />
         ))}
-      </ul>
+      </div>
     </div>
   );
 }

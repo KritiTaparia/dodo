@@ -1,13 +1,13 @@
 import Board from "@/components/board";
-import "./App.css";
 import { useStore } from "./lib/store";
+import { ThemeProvider } from "@/components/theme-provider";
 
 function App() {
   const selectedBoard = useStore((store) => store.selectedBoard);
   return (
-	// Header
-	<Board title={selectedBoard} />
-	// Footer
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <Board title={selectedBoard} />
+    </ThemeProvider>
   );
 }
 
