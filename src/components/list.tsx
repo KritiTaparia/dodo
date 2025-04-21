@@ -11,17 +11,19 @@ interface IListParams {
 }
 export default function List({ list }: IListParams) {
   return (
-    <Card className="border-0 w-88 h-full bg-zinc-950/60">
+    <Card className="border-0 w-88 h-full bg-[#0f0f13]">
       <CardHeader>
-        <CardTitle>{list.title}</CardTitle>
+        <CardTitle className="text-foreground/90">{list.title}</CardTitle>
       </CardHeader>
       <CardContent className="px-3">
-        <TaskCard className="border-0 bg-zinc-950/60 hover:bg-zinc-900">
+        <TaskCard className="border-0 bg-transparent hover:bg-zinc-900">
           <div className="flex flex-start gap-2">
             <span className="bg-gradient-to-r from-purple-400 via-pink-300 to-red-300 text-transparent bg-clip-text">
               <PlusIcon className="text-purple-400" />
             </span>
-            <p>Add a new task...</p>
+            <p className="text-foreground/40 text-sm leading-[1.6rem]">
+              Add a new task...
+            </p>
           </div>
         </TaskCard>
         <ScrollArea className="flex flex-col max-h-[60vh] sm:max-h-48 md:max-h-[50vh] lg:max-h-[60vh]">

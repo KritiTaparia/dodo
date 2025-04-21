@@ -11,11 +11,13 @@ export default function Task({ task }: ITaskParams) {
   return (
     <TaskCard>
       <CardTitle className="flex justify-between">
-        <div>
-          <Checkbox id={task.title} checked={task.done} className="mr-2" />
-          <label className="text-sm" htmlFor={task.title}>
-            {task.title}
-          </label>
+        <div className="flex items-center">
+          <Checkbox
+            id={task.title}
+            checked={task.done}
+            className="mr-2 dark:data-[state=checked]:text-purple-200 dark:data-[state=checked]:bg-purple-400"
+          />
+          <p className="text-sm text-foreground/80">{task.title}</p>
         </div>
         <span className="text-xs font-thin text-muted-foreground">
           {formatDate(task.dueDate)}
