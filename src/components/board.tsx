@@ -9,7 +9,7 @@ export default function Board({ title }: IBoardParams) {
   const board = getSelectedBoard(title);
 
   return (
-    <div className="py-4 px-8 w-fit min-w-full">
+    <div className="py-4 pt-[4.5rem] px-8 w-fit min-w-full">
       <h1 className="mb-6">{board.title}</h1>
       <div className="flex justify-start align-top gap-4">
         {board.lists.map((list) => (
