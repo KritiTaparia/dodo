@@ -22,7 +22,22 @@ export default function List({ list }: IListParams) {
         <CardTitle>{list.title}</CardTitle>
       </CardHeader>
       <CardContent>
-        <ScrollArea className="flex flex-col max-h-[70vh]">
+        <ScrollArea className="flex flex-col max-h-[60vh]">
+          {list.tasks.map((task) => (
+            <Task key={task.title + " " + task.description} task={task} />
+          ))}
+          {list.tasks.map((task) => (
+            <Task key={task.title + " " + task.description} task={task} />
+          ))}
+          {list.tasks.map((task) => (
+            <Task key={task.title + " " + task.description} task={task} />
+          ))}
+          {list.tasks.map((task) => (
+            <Task key={task.title + " " + task.description} task={task} />
+          ))}
+          {list.tasks.map((task) => (
+            <Task key={task.title + " " + task.description} task={task} />
+          ))}
           {list.tasks.map((task) => (
             <Task key={task.title + " " + task.description} task={task} />
           ))}
