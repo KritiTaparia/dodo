@@ -27,7 +27,7 @@ export const DEFAULT_STATE: IBoard[] = [
           {
             done: true,
             title: "Play",
-            description: "Go to park",
+            description: "",
             dueDate: new Date(),
           },
         ],

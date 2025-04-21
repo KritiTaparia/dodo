@@ -13,13 +13,19 @@ export default function Task({ task }: ITaskParams) {
       <CardTitle className="flex justify-between">
         <div>
           <Checkbox id={task.title} checked={task.done} className="mr-2" />
-          <label htmlFor={task.title}>{task.title}</label>
+          <label className="text-sm" htmlFor={task.title}>
+            {task.title}
+          </label>
         </div>
         <span className="text-xs font-thin text-muted-foreground">
           {formatDate(task.dueDate)}
         </span>
       </CardTitle>
-      <CardDescription>{task.description}</CardDescription>
+      {task.description && (
+        <CardDescription className="text-xs mt-1">
+          {task.description}
+        </CardDescription>
+      )}
     </TaskCard>
   );
 }

@@ -15,33 +15,6 @@ export default function Board({ title }: IBoardParams) {
         {board.lists.map((list) => (
           <List key={list.title} list={list} />
         ))}
-        {board.lists.map((list) => (
-          <List key={list.title} list={list} />
-        ))}
-        {board.lists.map((list) => (
-          <List key={list.title} list={list} />
-        ))}
-        {board.lists.map((list) => (
-          <List key={list.title} list={list} />
-        ))}
-        {board.lists.map((list) => (
-          <List key={list.title} list={list} />
-        ))}
-        {board.lists.map((list) => (
-          <List key={list.title} list={list} />
-        ))}
-        {board.lists.map((list) => (
-          <List key={list.title} list={list} />
-        ))}
-        {board.lists.map((list) => (
-          <List key={list.title} list={list} />
-        ))}
-        {board.lists.map((list) => (
-          <List key={list.title} list={list} />
-        ))}
-        {board.lists.map((list) => (
-          <List key={list.title} list={list} />
-        ))}
       </div>
     </div>
   );
