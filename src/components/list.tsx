@@ -28,6 +28,15 @@ export default function List({ list }: IListParams) {
           {list.tasks.map((task) => (
             <Task key={task.title + " " + task.description} task={task} />
           ))}
+          {list.tasks.map((task) => (
+            <Task key={task.title + " " + task.description} task={task} />
+          ))}
+          {list.tasks.map((task) => (
+            <Task key={task.title + " " + task.description} task={task} />
+          ))}
+          {list.tasks.map((task) => (
+            <Task key={task.title + " " + task.description} task={task} />
+          ))}
         </ScrollArea>
       </CardContent>
     </Card>
