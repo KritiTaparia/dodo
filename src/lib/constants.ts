@@ -2,7 +2,7 @@ import { IBoard } from "./types";
 
 export const DEFAULT_STATE: IBoard[] = [
   {
-    title: "default",
+    title: "Board 1",
     lists: [
       {
         title: "List 1",
