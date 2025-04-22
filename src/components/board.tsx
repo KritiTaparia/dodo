@@ -13,7 +13,7 @@ export default function Board({ title }: IBoardParams) {
   return (
     <div className="py-4 pt-[4.5rem] px-8 w-fit min-w-full">
       <h1 className="mb-6">{board.title}</h1>
-      <div className="overflow-x-auto overflow-y-hidden snap-x snap-mandatory md:snap-none lg:snap-none flex justify-start align-top gap-4">
+      <div className="overflow-x-auto overflow-y-hidden snap-x snap-mandatory lg:snap-none flex justify-start align-top gap-4">
         {board.lists.map((list) => (
           <List key={list.title} list={list} />
         ))}
