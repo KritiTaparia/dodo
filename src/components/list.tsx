@@ -26,7 +26,7 @@ export default function List({ list }: IListParams) {
             </p>
           </div>
         </TaskCard>
-        <ScrollArea className="flex flex-col h-[calc(100vh-12rem)] max-h-[30vh] sm:max-h-[40vh] md:max-h-[50vh] lg:max-h-[60vh]">
+        <ScrollArea className="flex flex-col h-[calc(100vh-12rem)] max-h-[50vh] lg:max-h-[60vh]">
           {list.tasks.map((task) => (
             <Task key={task.title + " " + task.description} task={task} />
           ))}
