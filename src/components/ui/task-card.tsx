@@ -12,7 +12,7 @@ export default function TaskCard({ className, children }: ITaskCardParams) {
         className
       }
     >
-      <CardHeader className="p-0">{children}</CardHeader>
+      <CardHeader className="p-0 gap-0">{children}</CardHeader>
     </Card>
   );
 }

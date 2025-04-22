@@ -17,16 +17,28 @@ export default function List({ list }: IListParams) {
       </CardHeader>
       <CardContent className="px-3">
         <TaskCard className="border-0 bg-transparent hover:bg-zinc-900">
-          <div className="flex flex-start gap-2">
+          <div className="flex flex-start gap-2 items-center">
             <span className="bg-gradient-to-r from-purple-400 via-pink-300 to-red-300 text-transparent bg-clip-text">
-              <PlusIcon className="text-purple-400" />
+              <PlusIcon className="text-purple-400 size-4" />
             </span>
-            <p className="text-foreground/40 text-sm leading-[1.6rem]">
+            <p className="text-foreground/40 text-sm font-normal">
               Add a new task...
             </p>
           </div>
         </TaskCard>
-        <ScrollArea className="flex flex-col max-h-[60vh] sm:max-h-[30vh] md:max-h-[50vh] lg:max-h-[60vh]">
+        <ScrollArea className="flex flex-col h-[calc(100vh-12rem)] max-h-[30vh] sm:max-h-[40vh] md:max-h-[50vh] lg:max-h-[60vh]">
+          {list.tasks.map((task) => (
+            <Task key={task.title + " " + task.description} task={task} />
+          ))}
+          {list.tasks.map((task) => (
+            <Task key={task.title + " " + task.description} task={task} />
+          ))}
+          {list.tasks.map((task) => (
+            <Task key={task.title + " " + task.description} task={task} />
+          ))}
+          {list.tasks.map((task) => (
+            <Task key={task.title + " " + task.description} task={task} />
+          ))}
           {list.tasks.map((task) => (
             <Task key={task.title + " " + task.description} task={task} />
           ))}

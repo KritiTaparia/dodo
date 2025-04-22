@@ -14,9 +14,9 @@ export const DEFAULT_STATE: IBoard[] = [
             dueDate: new Date(),
           },
           {
-            done: true,
+            done: false,
             title: "Tomorrow",
-            description: "List of tasks for tomorrow",
+            description: "",
             dueDate: new Date(),
           },
         ],

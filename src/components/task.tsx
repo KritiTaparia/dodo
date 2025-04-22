@@ -10,21 +10,21 @@ interface ITaskParams {
 export default function Task({ task }: ITaskParams) {
   return (
     <TaskCard>
-      <CardTitle className="flex justify-between">
+      <CardTitle className="flex justify-between items-center">
         <div className="flex items-center">
           <Checkbox
             id={task.title}
             checked={task.done}
-            className="mr-2 dark:data-[state=checked]:text-purple-200 dark:data-[state=checked]:bg-purple-400"
+            className="mr-2 dark:data-[state=checked]:text-purple-200 dark:data-[state=checked]:bg-purple-400 "
           />
-          <p className="text-sm text-foreground/80">{task.title}</p>
+          <p className="text-sm text-foreground/80 font-normal">{task.title}</p>
         </div>
-        <span className="text-xs font-thin text-muted-foreground">
+        <span className="text-xs font-light text-muted-foreground/45">
           {formatDate(task.dueDate)}
         </span>
       </CardTitle>
       {task.description && (
-        <CardDescription className="text-xs mt-1">
+        <CardDescription className="text-xs mt-2 font-light">
           {task.description}
         </CardDescription>
       )}
