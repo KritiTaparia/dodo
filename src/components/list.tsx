@@ -18,11 +18,9 @@ export default function List({ list }: IListParams) {
       <CardContent className="px-3">
         <TaskCard className="border-0 bg-transparent hover:bg-zinc-900">
           <div className="flex flex-start gap-2 items-center">
-            <span className="bg-gradient-to-r from-purple-400 via-pink-300 to-red-300 text-transparent bg-clip-text">
-              <PlusIcon className="text-purple-400 size-4" />
-            </span>
+            <PlusIcon className="text-purple-400 size-4" />
             <p className="text-foreground/40 text-sm font-normal">
-              Add a new task...
+              Add a new task
             </p>
           </div>
         </TaskCard>
