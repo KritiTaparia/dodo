@@ -11,9 +11,9 @@ export default function Board({ title }: IBoardParams) {
   const board = getSelectedBoard(title);
 
   return (
-    <div className="px-8 flex-1 h-full w-full">
-      <h1 className="mb-6">{board.title}</h1>
-      <div className="overflow-x-auto snap-x snap-mandatory lg:snap-none flex justify-start align-top gap-4">
+    <div className="flex-1 h-full w-full">
+      <h1 className="px-8 mb-6">{board.title}</h1>
+      <div className="px-8 overflow-x-auto snap-x snap-mandatory lg:snap-none flex justify-start align-top gap-4">
         {board.lists.map((list) => (
           <List key={list.title} list={list} />
         ))}
