@@ -11,7 +11,7 @@ interface IListParams {
 }
 export default function List({ list }: IListParams) {
   return (
-    <Card className="border-0 w-88 h-full bg-[#0f0f13]">
+    <Card className="snap-center border-0 w-88 h-full bg-[#0f0f13]">
       <CardHeader>
         <CardTitle className="text-foreground/90">{list.title}</CardTitle>
       </CardHeader>
@@ -26,28 +26,7 @@ export default function List({ list }: IListParams) {
             </p>
           </div>
         </TaskCard>
-        <ScrollArea className="flex flex-col h-[calc(100vh-12rem)] max-h-[50vh] lg:max-h-[60vh]">
-          {list.tasks.map((task) => (
-            <Task key={task.title + " " + task.description} task={task} />
-          ))}
-          {list.tasks.map((task) => (
-            <Task key={task.title + " " + task.description} task={task} />
-          ))}
-          {list.tasks.map((task) => (
-            <Task key={task.title + " " + task.description} task={task} />
-          ))}
-          {list.tasks.map((task) => (
-            <Task key={task.title + " " + task.description} task={task} />
-          ))}
-          {list.tasks.map((task) => (
-            <Task key={task.title + " " + task.description} task={task} />
-          ))}
-          {list.tasks.map((task) => (
-            <Task key={task.title + " " + task.description} task={task} />
-          ))}
-          {list.tasks.map((task) => (
-            <Task key={task.title + " " + task.description} task={task} />
-          ))}
+        <ScrollArea className="flex flex-col max-h-[50vh] lg:max-h-[60vh]">
           {list.tasks.map((task) => (
             <Task key={task.title + " " + task.description} task={task} />
           ))}
