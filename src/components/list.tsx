@@ -24,7 +24,7 @@ export default function List({ list }: IListParams) {
               </p>
             </div>
           </TaskCard>
-          <div className="max-h-[65vh] overflow-y-auto flex flex-col">
+          <div className="max-h-[60vh] md:max-h-[65vh] overflow-y-auto flex flex-col">
             {list.tasks.map((task) => (
               <Task key={task.title + " " + task.description} task={task} />
             ))}
