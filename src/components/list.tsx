@@ -10,7 +10,7 @@ interface IListParams {
 }
 export default function List({ list }: IListParams) {
   return (
-    <div className="h-full">
+    <div>
       <Card className="snap-center border-0 w-88 bg-[#0f0f13]">
         <CardHeader>
           <CardTitle className="text-foreground/90">{list.title}</CardTitle>
@@ -24,7 +24,7 @@ export default function List({ list }: IListParams) {
               </p>
             </div>
           </TaskCard>
-          <div className="max-h-[50vh] md:max-h-[65vh] overflow-y-auto flex flex-col">
+          <div className="max-h-[65vh] overflow-y-auto flex flex-col">
             {list.tasks.map((task) => (
               <Task key={task.title + " " + task.description} task={task} />
             ))}

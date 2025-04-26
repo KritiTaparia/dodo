@@ -12,7 +12,7 @@ export default function Board({ title }: IBoardParams) {
 
   return (
     <div className="flex-1 flex flex-col">
-      <h1 className="py-6 px-8">{board.title}</h1>
+      <h1 className="py-4 px-6">{board.title}</h1>
       <div className="h-full px-8 overflow-x-auto snap-x snap-mandatory lg:snap-none flex justify-start align-top gap-4">
         {board.lists.map((list) => (
           <List key={list.title} list={list} />
