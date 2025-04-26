@@ -10,8 +10,8 @@ interface IListParams {
 }
 export default function List({ list }: IListParams) {
   return (
-    <div className="">
-      <Card className="shrink-0 flex-nowrap snap-center border-0 w-88 bg-[#0f0f13]">
+    <div className="h-full">
+      <Card className="snap-center border-0 w-88 bg-[#0f0f13]">
         <CardHeader>
           <CardTitle className="text-foreground/90">{list.title}</CardTitle>
         </CardHeader>
