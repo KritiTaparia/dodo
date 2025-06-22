@@ -8,7 +8,7 @@ export default function TaskCard({ className, children }: ITaskCardParams) {
   return (
     <Card
       className={
-        "w-full mb-3 border-0 bg-zinc-900 hover:bg-transparent rounded-lg px-4 py-3 " +
+        "w-full mb-3 border-0 bg-zinc-900 hover:bg-transparent rounded-lg px-4 py-3 cursor-pointer " +
         className
       }
     >

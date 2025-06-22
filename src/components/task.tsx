@@ -6,6 +6,7 @@ import { formatDate } from "@/lib/utils";
 
 interface ITaskParams {
   task: ITask;
+  listId: string;
 }
 export default function Task({ task }: ITaskParams) {
   return (

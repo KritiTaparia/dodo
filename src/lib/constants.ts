@@ -35,3 +35,10 @@ export const DEFAULT_STATE: IBoard[] = [
     ],
   },
 ];
+
+export const DEFAULT_TASK = {
+  done: false,
+  title: "Default Task",
+  description: "",
+  dueDate: new Date(),
+};

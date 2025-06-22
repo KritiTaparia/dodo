@@ -1,5 +1,5 @@
 import List from "@/components/list";
-import { useStore } from "@/lib/store";
+import { useBoard } from "@/lib/store";
 import TaskCard from "./ui/task-card";
 import { PlusIcon } from "lucide-react";
 
@@ -7,24 +7,14 @@ interface IBoardParams {
   title: string;
 }
 export default function Board({ title }: IBoardParams) {
-  const getSelectedBoard = useStore((store) => store.getBoard);
-  const board = getSelectedBoard(title);
+  const board = useBoard(title);
 
   return (
     <div className="flex-1 flex flex-col">
-      <h1 className="py-4 px-6">{board.title}</h1>
+      <h1 className="py-4 px-6">{board?.title}</h1>
       <div className="h-full px-8 overflow-x-auto overflow-y-hidden snap-x snap-mandatory lg:snap-none flex justify-start align-top gap-4">
-        {board.lists.map((list) => (
-          <List key={list.title} list={list} />
-        ))}
-        {board.lists.map((list) => (
-          <List key={list.title} list={list} />
-        ))}
-        {board.lists.map((list) => (
-          <List key={list.title} list={list} />
-        ))}
-        {board.lists.map((list) => (
-          <List key={list.title} list={list} />
+        {board?.lists.map((list) => (
+          <List key={list.title} title={list.title} />
         ))}
         <div>
           <TaskCard className="snap-center border-0 w-88 bg-zinc-900">
